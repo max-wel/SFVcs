@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "myvcs"
+version = "0.1"
+description = "A version control CLI tool"
+requires-python = ">=3.10"
+
+dependencies = [
+    "arguably",
+    "bsdiff4",
+    "rich",
+]
+
+[project.scripts]
+sfvcs = "main:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

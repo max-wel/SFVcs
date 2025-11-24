@@ -1,0 +1,71 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+*.whl
+*.tar.gz
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+.env
+
+# pipx installs
+# pipx installs in ~/.local/bin, which shouldn't be tracked
+# No need to ignore here, just ensure scripts aren't in repo
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Python test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# MyPy / type checking
+.mypy_cache/
+.dmypy.json
+.dmypy.json/
+
+# Pyre type checker
+.pyre/
+
+# Cython
+cython_debug/
+
+# Logs
+*.log
+
+# Ignore secrets
+.env
+.envrc
+.streamlit/secrets.toml
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore package metadata
+*.pypirc
+.vcs
