@@ -20,11 +20,6 @@ def verify_tracked_file(file_name: str):
         raise ValueError(f"'{file_name}' is not a valid file.")
 
     
-    with open(file_name, "rb") as f:
-        chunk = f.read(1024)
-
-    if b"\x00" in chunk:
-        raise ValueError("Only text files can be tracked.")
 
 def track_file(file_name: str):
     verify_tracked_file(file_name)
