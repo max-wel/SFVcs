@@ -19,10 +19,11 @@ def verify_tracked_file(file_name: str):
     if not os.path.isfile(file_name):
         raise ValueError(f"'{file_name}' is not a valid file.")
 
-    try:
-        with open(file_name, "r", encoding="utf-8") as f:
-            f.read(512)
-    except UnicodeDecodeError:
+    
+    with open(file_name, "rb") as f:
+        chunk = f.read(1024)
+
+    if b"\x00" in chunk:
         raise ValueError("Only text files can be tracked.")
 
 def track_file(file_name: str):
