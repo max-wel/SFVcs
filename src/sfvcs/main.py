@@ -1,12 +1,12 @@
 import arguably
-from commands.checkout import checkout_snapshot
-from commands.init import init_repo, VCS_DIR
-from commands.log import show_commits
-from commands.snapshot import create_snapshot
-from commands.stage import track_file
-from commands.status import show_status
-from utils.decorators import safe_command
-from utils.ui import success, info
+from sfvcs.commands.checkout import checkout_snapshot
+from sfvcs.commands.init import init_repo, VCS_DIR
+from sfvcs.commands.log import show_commits
+from sfvcs.commands.snapshot import create_snapshot
+from sfvcs.commands.stage import track_file
+from sfvcs.commands.status import show_status
+from sfvcs.utils.decorators import safe_command
+from sfvcs.utils.ui import success, info
 
 
 @arguably.command
