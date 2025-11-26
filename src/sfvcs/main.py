@@ -28,8 +28,9 @@ def add(file: str):
 def commit(message: str):
     """Commit changes."""
     snapshot = create_snapshot(message)
+    print(snapshot)
     success("Changes committed successfully.")
-    info(f"{snapshot.id[:5]} -> {snapshot.metadata.message}")
+    info(f"{snapshot.id[:5]} -> {snapshot.metadata["message"]}")
 
 @arguably.command
 @safe_command

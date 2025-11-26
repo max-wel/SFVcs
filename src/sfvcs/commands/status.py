@@ -23,6 +23,6 @@ def show_status():
         target_bytes = f.read()
 
     if not has_changes(blob_id, target_bytes):
-        raise NoChangesError(f"✅ No changes detected in '{tracked_file_path}'.")
+        return f"No changes detected in '{tracked_file_path}'."
     else:
         return f"⚠ Changes detected in '{tracked_file_path}' — ready to commit."

@@ -53,9 +53,10 @@ def create_snapshot(message: str):
             "message": message,
             "timestamp": datetime.now().isoformat(timespec="seconds")
         }
-        commit_id = create_commit(parent=head, entry=blob_id, metadata=commit_meta)
-        update_head(commit_id)
-        return
+        
+        commit = create_commit(parent=head, entry=blob_id, metadata=commit_meta)
+        update_head(commit.id)
+        return commit
 
     # reconstruct prv file and store diff
     with open(f"{CasStore.get_object_store_location()}/{head}.json") as f:
