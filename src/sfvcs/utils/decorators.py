@@ -19,6 +19,6 @@ def safe_command(func):
             warning(str(e))
             sys.exit(1)
         except Exception as e:
-            error(f"Unexpected error: {e}")
+            error(str(e))
             sys.exit(2)
     return wrapper

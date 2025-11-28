@@ -12,8 +12,7 @@ def show_status():
     head = ref.get("head")
 
     if not head:
-        print(f"🕐 Tracking '{tracked_file_path}', but no commits yet.")
-        return
+        return f"🕐 Tracking '{tracked_file_path}', but no commits yet."
 
     with open(f"{CasStore.get_object_store_location()}/{head}.json") as f:
         commit = json.load(f)

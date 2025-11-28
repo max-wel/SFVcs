@@ -28,7 +28,7 @@ def checkout_snapshot(commit_id: str):
     update_head(commit_id)
 
     ts = datetime.fromisoformat(commit["metadata"]["timestamp"])
-    print(f"✔ Checked out commit {commit_id}")
+    # print(f"✔ Checked out commit {commit_id}")
     print(f"  Message: {commit['metadata']['message']}")
     print(f"  Date: {ts.strftime('%b %d, %Y %H:%M:%S')}")
     print(f"  Restored: {tracked_file}")
